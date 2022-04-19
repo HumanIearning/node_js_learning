@@ -13,5 +13,6 @@ app.set('view engine', 'ejs');  // 뷰엔진 지정 ejs가 유명함
 
 
 app.use('/', home);   // use : 미들웨어 등록 메서드
+app.use(express.static(`${__dirname}/src/public`));
 
 module.exports = app; // 다른 파일과 연동 하기위함
